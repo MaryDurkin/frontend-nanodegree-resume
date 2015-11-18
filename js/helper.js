@@ -54,7 +54,7 @@ var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
-
+// use code like this to build other buttons into the dom
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
@@ -83,7 +83,7 @@ $(document).ready(function() {
 
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
-*/
+
 clickLocations = [];
 
 function logClicks(x,y) {
@@ -101,7 +101,7 @@ $(document).click(function(loc) {
   var y = loc.pageY;
   logClicks(x,y);
 });
-
+*/
 
 
 /*
@@ -134,6 +134,7 @@ function initializeMap() {
   locationFinder() returns an array of every location string from the JSONs
   written for bio, education, and work.
   */
+  // amend this when you have a places-lived object
   function locationFinder() {
 
     // initializes an empty array
