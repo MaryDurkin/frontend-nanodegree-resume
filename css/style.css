@@ -134,6 +134,17 @@ a {
   background-color: #4a4a4a;
 }
 
+.url-link {
+  -webkit-tap-highlight-color: #000;
+
+  /*color: -webkit-link; */
+  text-decoration: underline;
+  cursor: auto;
+
+}
+.url-link:hover {
+  color: green;
+}
 /* TODO: Replace with image later */
 #header {
   background-color: #484848;
@@ -219,3 +230,5 @@ span {
     display: block;
   }
 }
+
+/* try this css for highlighting url links -webkit-tap-highlight-color: rgba(0,0,0,0);
