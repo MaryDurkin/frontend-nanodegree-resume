@@ -27,7 +27,7 @@ body {
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 0 5%;
+  padding: 20px 5%;
 
 }
 
@@ -53,7 +53,7 @@ h2 {
 h3 {
   font-style: bold;
   font-size: 20px;
-  color: rgba(124, 105, 106, 1);
+  color: rgba(65, 46, 44, 1);
   /*color: #999;*/
   line-height: 22px;
 }
@@ -71,6 +71,9 @@ h4,
 h5 {
   padding:10px 5%;
 
+}
+#online-h3 {
+  padding-top: 20px;
 }
 
 .date-text {
@@ -102,7 +105,7 @@ p {
 }
 
 a {
-  color: #1199c3;
+  color: #0A5FB0;
   font-size: 20px;
   text-decoration: none;
   margin-top: 10px;
@@ -131,7 +134,7 @@ a {
 }
 
 .orange {
-  background-color: rgba(124, 105, 106, 0.5);
+  /*background-color: rgba(172, 188, 201, 1);*/
    /* original color
   background-color: #f5ae23;
   */
@@ -139,6 +142,7 @@ a {
 
 .orange-text {
   color: rgba(65, 46, 44, 1);
+
   /* original color
   color: #f5ae23;
   */
@@ -151,7 +155,8 @@ a {
 
 .gray {
   /* in the original file used for Work Experience and education*/
-  background-color: rgba(140, 150, 87, 0.2);
+  background-color: rgba(172, 188, 201, 0.4);
+  /*background-color: rgba(140, 150, 87, 0.2);*/
   /* original color
   background-color: #f3f3f3;
   */
@@ -161,15 +166,22 @@ a {
 
 .dark-gray {
   /* in the original file used for footer*/
-  background-color: rgba(140, 150, 87, 0.7);
+
+  /*background-color: rgba(172, 188, 201, 1);*/
   /* original color
   background-color: #4a4a4a;
   */
 }
+#footerContacts {
+  background-color: rgba(172, 188, 201, 1);
+}
 
 .url-link {
   -webkit-tap-highlight-color: #000;
+  color: #8c9657;
+  padding-top: 5px 5%;
 
+  padding-left: 0;
   /*color: -webkit-link; */
 
   cursor: auto;
@@ -181,7 +193,8 @@ a {
 /* TODO: Replace with image later */
 #header,
 #navbar {
-  background-color: rgba(140, 150, 87, 0.5);
+  background-color: rgba(172, 188, 201, 1);
+  /*background-color: rgba(140, 150, 87, 0.5);*/
   /* original color
   background-color: #484848;
   */
@@ -214,7 +227,7 @@ nav {
 }
 
 .navbr:hover {
-  color: blue;
+  color: #8c9657;
 }
 
 nav li {
@@ -235,12 +248,15 @@ nav li {
 
 img {
   padding: 10px;
+  padding-left: 0;
+  padding-right: 20px;
+
 }
 
 span {
   padding: 5px;
   padding-left: 10px;
-  padding-left: 0;
+
 }
 
 #lets-connect {

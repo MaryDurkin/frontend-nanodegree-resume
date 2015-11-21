@@ -43,19 +43,19 @@ var projects = {
 		"title" : "Project 0",
 		"dates" : "Sept 25 - 28",
 		"description" : "Introduction to me",
-		"images" : [ "https://s3.amazonaws.com/accredible-api-users/images/55022/original/1443215751311?1443216125", "https://s3.amazonaws.com/accredible-api-users/images/55022/original/1443215751311?1443216125"]
+		"images" : [ "images/BigRocks.jpg", "images/footprints.jpg"]
 	},
 	{
 		"title" : "Project 1",
 		"dates" : "Sept 28 - Oct 26",
 		"description" : "Portfolio",
-		"images" : ["http://placekitten.com/200/300", "http://placekitten.com/200/300"]
+		"images" : ["images/WeirdRock1.jpg", "images/WeirdRock2.jpg", "images/WeirdRock3.jpg"]
 	},
 	{
 		"title" : "Project 2",
 		"dates" : "Oct 27 - present",
 		"description" : "Resume",
-		"images" : [ "http://placekitten.com/600/300"]
+		"images" : [ "images/Wave1.jpg","images/Wave2.jpg"]
 	}
   ]
 };
@@ -82,8 +82,8 @@ var bio = {
 	"role" : "Aspiring Web Developer",
 	"skills" : ["HTML", "css", "JavaScript", "Good Design Sense"],
 	"contacts" : {
-		"mobile" : "610 585 5238",
-		"email" : "mary.walsh@gmail.com",
+		"mobile" : "610 565 5438",
+		"email" : "quite.contrary@gmail.com",
 		"github" : "MaryDurkin",
 		"twitter" : "@dmsticdelusion",
 		"location" : "Philadelphia"
@@ -91,12 +91,12 @@ var bio = {
 };
 
 bio.display = function() {
-
-	$("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
-	$("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
-	$("#topContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
-	$("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
-	$("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+	// topContacts not needed with the navbar in place - uncomment if you change your mind
+	//$("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+	//$("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+	//$("#topContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
+	//$("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+	//$("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
 	$("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
 	$("#footerContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
 	$("#footerContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
@@ -175,7 +175,7 @@ education.display = function(){
 			$(".education-entry:last").append(formattedTitelonlineSchool);
 			var formattedDates = HTMLonlineDates.replace("%data%",education.onlineCourses[item].dates);
 			$(".education-entry:last").append(formattedDates);
-			var formattedURL = HTMLonlineURL.replace("%data%",education.onlineCourses[item].url);
+			var formattedURL = HTMLonlineURL.replace("%data%","Visit Website");
 			var formattedLinkedURL = formattedURL.replace("#",education.onlineCourses[item].url);
 			$(".education-entry:last").append(formattedLinkedURL);
 		}
@@ -183,9 +183,7 @@ education.display = function(){
 }
 
 
-
-
-var headshot = "https://s3.amazonaws.com/accredible-api-users/images/55022/original/1443215751311?1443216125";
+var headshot = "images/headshot.jpg";
 //var headshot = "images/fry.jpg"; use this directory and call to source your own images.
 
 
@@ -212,7 +210,21 @@ $("#mapDiv").append(googleMap);
 
 $("#main").append(internationalizeButton);
 
-
+//smooth scroll code below
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
 
 /*
 

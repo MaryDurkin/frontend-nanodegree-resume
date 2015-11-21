@@ -49,13 +49,13 @@ var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
 var HTMLschoolMajor = '<em><br>Major: %data%</em>';
 
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
+var HTMLonlineClasses = '<h3 id="online-h3">Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
 var HTMLonlineDates = '<div class="date-text">%data%</div>';
 var HTMLonlineURL = '<br><a class="url-link" href="#">%data%</a>';
 // use code like this to build other buttons into the dom
-var internationalizeButton = '<button>Internationalize</button>';
+//var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 
@@ -123,8 +123,12 @@ function initializeMap() {
   var mapOptions = {
 
     disableDefaultUI: true,
-    // from snazzy maps - try to get this working....
-
+    /*from snazzymaps.com see following reference.
+            Pale Dawn
+            Adam Krogh
+            http://atmist.com
+            October 24, 2013
+    */
     styles: [
       {
         "featureType":"administrative",
