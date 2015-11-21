@@ -20,7 +20,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <!-- Tells the browser what the title of this page should be. -->
   <title>Resume</title>
-
+  <!-- font style -->
+  <link href='https://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet">
 
@@ -61,26 +62,41 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     display by looking at the id or at what's written between the <h2> tags.
     -->
     <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
+
+        <nav>
+        <ul>
+          <li><a class="navbr" href="#work">Work Experience</a></li>
+          <li><a class="navbr" href="#projects">Projects</a></li>
+          <li><a class="navbr" href="#places">Places</a></li>
+          <li><a class="navbr" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    <!-- commented out so contact appear at the bottom only -->
+    <!--<ul id="topContacts" class="flex-box"></ul> -->
     </div>
+    <!-- /navbar -->
+
     <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
+    <div id="workExperience">
+      <a name="work"></a>
       <h2>Work Experience</h2>
     </div>
-    <div id="projects">
+    <div id="projects" class="gray">
+      <a name="projects"></a>
       <h2>Projects</h2>
     </div>
-    <div id="education" class="gray">
+    <div id="education">
       <h2>Education</h2>
     </div>
     <!-- consider adding div here for 'places-lived' -->
     <div id="mapDiv">
+      <a name="places"></a>
       <h2>Where I've Lived and Worked</h2>
     </div>
     <div id="lets-connect" class="dark-gray">
       <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-      </ul>
+      <a name="contact"></a>
+      <ul id="footerContacts" class="flex-box"></ul>
     </div>
   </div>
 

@@ -62,6 +62,7 @@ var googleMap = '<div id="map"></div>';
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
+/*
 function inName(name) {
   var intName = name;
   nameArray = name.trim().split(" "); // makes an array of two elements
@@ -72,15 +73,15 @@ function inName(name) {
   intName = firstName + " " +lastName;
   return intName;
 }
-
-
+*/
+/*
 $(document).ready(function() {
   $('button').click(function() {
     var iName = inName(bio["name"]) || function(){};
     $('#name').html(iName);
   });
 });
-
+*/
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
 
@@ -120,8 +121,105 @@ function initializeMap() {
   var locations;
 
   var mapOptions = {
-    disableDefaultUI: true
+
+    disableDefaultUI: true,
+    // from snazzy maps - try to get this working....
+
+    styles: [
+      {
+        "featureType":"administrative",
+        "elementType":"all",
+        "stylers":[
+          {
+            "visibility":"on"
+          },
+        {
+          "lightness":33}
+
+        ]
+      },
+      {
+        "featureType":"landscape",
+        "elementType":"all",
+        "stylers":[
+          {
+            "color":"#f2e5d4"
+          }
+        ]
+      },
+      {
+        "featureType":"poi.park",
+        "elementType":"geometry",
+        "stylers":[
+          {
+            "color":"#c5dac6"
+          }
+        ]
+      },
+      {
+        "featureType":"poi.park",
+        "elementType":"labels",
+        "stylers":[
+          {
+            "visibility":"on"
+          },
+          {
+            "lightness":20
+          }
+        ]
+      },
+      {
+        "featureType":"road",
+        "elementType":"all",
+        "stylers":[
+          {
+            "lightness":20
+          }
+        ]
+      },
+      {
+        "featureType":"road.highway",
+        "elementType":"geometry",
+        "stylers":[
+          {
+            "color":"#c5c6c6"
+          }
+        ]
+      },
+       {
+        "featureType":"road.arterial",
+        "elementType":"geometry",
+        "stylers":[
+          {
+            "color":"#e4d7c6"
+          }
+        ]
+      },
+      {
+        "featureType":"road.local",
+        "elementType":"geometry",
+        "stylers":[
+          {
+            "color":"#fbfaf7"
+          }
+        ]
+      },
+      {
+        "featureType":"water",
+        "elementType":"all",
+        "stylers":[
+          {
+          "visibility":"on"
+          },
+          {
+            "color":"#acbcc9"
+          }
+        ]
+      }
+    ]
+
   };
+
 
   /*
   For the map to be displayed, the googleMap var must be

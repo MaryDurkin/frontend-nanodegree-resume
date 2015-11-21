@@ -11,7 +11,13 @@ h5,
 h6 {
   padding:0;
   margin:0;
+  font-family: 'Muli', sans-serif;
+  /* original font
   font-family: "Roboto", sans-serif;
+  */
+}
+body {
+  background-color: rgba(124, 105, 106, .3);
 }
 
 .clear-fix {
@@ -27,7 +33,10 @@ h6 {
 
 h1 {
   font-size: 40px;
+  color: rgba(64, 45, 46, 1);
+  /*original color
   color: #f5a623;
+  */
   line-height: 48px;
   display: inline;
 }
@@ -35,7 +44,8 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: rgba(65, 46, 44, 1);
+  /*color: #999;*/
   line-height: 29px;
   padding: 10px;
 }
@@ -43,7 +53,8 @@ h2 {
 h3 {
   font-style: bold;
   font-size: 20px;
-  color: #999;
+  color: rgba(124, 105, 106, 1);
+  /*color: #999;*/
   line-height: 22px;
 }
 
@@ -62,11 +73,11 @@ h5 {
 
 }
 
-
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: rgba(124, 105, 106, 1);
+  /*color: #999;*/
   line-height: 16px;
   float: left;
 }
@@ -74,7 +85,8 @@ h5 {
 .location-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: rgba(124, 105, 106, 1);
+  /*color: #999;*/
   line-height: 16px;
   float: right;
 
@@ -82,12 +94,16 @@ h5 {
 
 p {
   font-size: 14px;
+  color: #8c9657;
+  /*
   color: #333;
+  */
   line-height: 21px;
 }
 
 a {
   color: #1199c3;
+  font-size: 20px;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -101,7 +117,10 @@ a {
 }
 
 #skills-h3 {
+  color: rgba(65, 46, 44, 1);
+  /*
   color: #f5ae23;
+  */
   display: none;
 }
 
@@ -112,11 +131,17 @@ a {
 }
 
 .orange {
+  background-color: rgba(124, 105, 106, 0.5);
+   /* original color
   background-color: #f5ae23;
+  */
 }
 
 .orange-text {
+  color: rgba(65, 46, 44, 1);
+  /* original color
   color: #f5ae23;
+  */
 }
 
 .white-text {
@@ -125,30 +150,43 @@ a {
 }
 
 .gray {
+  /* in the original file used for Work Experience and education*/
+  background-color: rgba(140, 150, 87, 0.2);
+  /* original color
   background-color: #f3f3f3;
+  */
   padding-bottom: 10px;
   clear:both;
 }
 
 .dark-gray {
+  /* in the original file used for footer*/
+  background-color: rgba(140, 150, 87, 0.7);
+  /* original color
   background-color: #4a4a4a;
+  */
 }
 
 .url-link {
   -webkit-tap-highlight-color: #000;
 
   /*color: -webkit-link; */
-  text-decoration: underline;
+
   cursor: auto;
 
 }
 .url-link:hover {
-  color: green;
+  color: blue;
 }
 /* TODO: Replace with image later */
-#header {
+#header,
+#navbar {
+  background-color: rgba(140, 150, 87, 0.5);
+  /* original color
   background-color: #484848;
+  */
 }
+
 
 .flex-box {
   display: -webkit-flex;
@@ -167,10 +205,31 @@ ul {
   list-style-type: none;
 }
 
+nav {
+  margin: 0px;
+  width: 100%;
+  /* background-color: #4a4a4a; */
+  padding-bottom: 50px;
+  list-style: none;
+}
+
+.navbr:hover {
+  color: blue;
+}
+
+nav li {
+  float: left;
+  /*background-color: #4a4a4a; */
+  width: 25%;
+  position: relative;
+
+}
+
 .biopic {
   float: left;
   padding: 10px;
   width: 200px;
+  border-radius: 50%;
   display: none;
 }
 
@@ -180,6 +239,8 @@ img {
 
 span {
   padding: 5px;
+  padding-left: 10px;
+  padding-left: 0;
 }
 
 #lets-connect {
