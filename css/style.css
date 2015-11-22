@@ -12,10 +12,8 @@ h6 {
   padding:0;
   margin:0;
   font-family: 'Muli', sans-serif;
-  /* original font
-  font-family: "Roboto", sans-serif;
-  */
 }
+
 body {
   background-color: rgba(124, 105, 106, .3);
 }
@@ -34,9 +32,6 @@ body {
 h1 {
   font-size: 40px;
   color: rgba(64, 45, 46, 1);
-  /*original color
-  color: #f5a623;
-  */
   line-height: 48px;
   display: inline;
 }
@@ -45,16 +40,14 @@ h2 {
   font-weight: bold;
   font-size: 24px;
   color: rgba(65, 46, 44, 1);
-  /*color: #999;*/
   line-height: 29px;
   padding: 10px;
 }
 
 h3 {
-  font-style: bold;
+  font-weight: bold;
   font-size: 20px;
   color: rgba(65, 46, 44, 1);
-  /*color: #999;*/
   line-height: 22px;
 }
 
@@ -80,7 +73,6 @@ h5 {
   font-style: italic;
   font-size: 14px;
   color: rgba(124, 105, 106, 1);
-  /*color: #999;*/
   line-height: 16px;
   float: left;
 }
@@ -89,7 +81,6 @@ h5 {
   font-style: italic;
   font-size: 14px;
   color: rgba(124, 105, 106, 1);
-  /*color: #999;*/
   line-height: 16px;
   float: right;
 
@@ -98,9 +89,6 @@ h5 {
 p {
   font-size: 14px;
   color: #8c9657;
-  /*
-  color: #333;
-  */
   line-height: 21px;
 }
 
@@ -111,7 +99,7 @@ a {
   margin-top: 10px;
   display: block;
 }
-/* what welcome message? did I miss something in the
+/* what welcome message? did I miss something in the videos?
 .welcome-message {
   font-style: italic;
   font-size: 18px;
@@ -121,9 +109,6 @@ a {
 */
 #skills-h3 {
   color: rgba(65, 46, 44, 1);
-  /*
-  color: #f5ae23;
-  */
   display: none;
 }
 
@@ -132,14 +117,6 @@ a {
   flex-flow: column nowrap;
   justify-content: flex-start;
 }
-/* no longer needed
-.orange {
-  /*background-color: rgba(172, 188, 201, 1);*/
-   /* original color
-  background-color: #f5ae23;
-
-}
-*/
 
 .chocolate-text {
   color: rgba(65, 46, 44, 1);
@@ -159,17 +136,6 @@ a {
   clear:both;
 }
 
-/* no longer used
-.dark-gray {
-  /* in the original file used for footer*/
-
-  /*background-color: rgba(172, 188, 201, 1);*/
-  /* original color
-  background-color: #4a4a4a;
-
-}
-*/
-
 #footerContacts {
   background-color: rgba(172, 188, 201, 1);
 }
@@ -178,25 +144,18 @@ a {
   -webkit-tap-highlight-color: #000;
   color: #8c9657;
   font-size: 18px;
-  padding-top: 5px 5%;
+  padding-top: 5px;
   padding-left: 0;
-  /* I'm not sure how -webkit works? and changed the color anyway
-  color: -webkit-link;
-  */
-
   cursor: auto;
 
 }
 .url-link:hover {
   color: blue;
 }
-/* TODO: Replace with image later */
+
 #header,
 #navbar {
   background-color: rgba(172, 188, 201, 1);
-  /* original color
-  background-color: #484848;
-  */
 }
 
 
@@ -230,8 +189,7 @@ nav {
 
 nav li {
   float: left;
-  /*background-color: #4a4a4a; */
-  width: 25%;
+  width: 20%;
   position: relative;
 
 }
