@@ -62,8 +62,11 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     display by looking at the id or at what's written between the <h2> tags.
     -->
     <div id="header" class="center-content clear-fix">
-
-        <nav>
+      <!--
+      I considered building the navbar in javascript but decided against
+      it as the targets are already defined in this file
+      -->
+      <nav>
         <ul>
           <li><a class="navbr" href="#work">Work Experience</a></li>
           <li><a class="navbr" href="#projects">Projects</a></li>
@@ -71,7 +74,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
           <li><a class="navbr" href="#contact">Contact</a></li>
         </ul>
       </nav>
-    <!-- commented out so contact appear at the bottom only -->
+    <!-- commented out so contacts appear at the bottom only (for visual clarity) -->
     <!--<ul id="topContacts" class="flex-box"></ul> -->
     </div>
 
@@ -81,15 +84,14 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       <a name="work"></a>
       <h2>Work Experience</h2>
     </div>
-    <div id="projects" class="gray">
+    <div id="projects" class="pale-blue">
       <a name="projects"></a>
       <h2>Projects</h2>
     </div>
     <div id="education">
       <h2>Education</h2>
     </div>
-    <!-- consider adding div here for 'places-lived' -->
-    <div id="mapDiv" class="gray">
+    <div id="mapDiv" class="pale-blue">
       <a name="places"></a>
       <h2>Where I've Lived and Worked</h2>
     </div>

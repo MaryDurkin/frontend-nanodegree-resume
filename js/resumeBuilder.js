@@ -19,7 +19,7 @@ var work = {
 	}]
 };
 work.display = function(){
-	for (job in work.jobs) {
+	for (var job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 		var formattedEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
 		var formattedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
@@ -42,26 +42,26 @@ var projects = {
 	{
 		"title" : "Project 0",
 		"dates" : "Sept 25 - 28",
-		"description" : "Introduction to me",
+		"description" : "All the photos were taken in Iceland - these two were at the beach",
 		"images" : [ "images/BigRocks.jpg", "images/footprints.jpg"]
 	},
 	{
 		"title" : "Project 1",
 		"dates" : "Sept 28 - Oct 26",
-		"description" : "Portfolio",
+		"description" : "I'm convinced there are spirits in these rocks",
 		"images" : ["images/WeirdRock1.jpg", "images/WeirdRock2.jpg", "images/WeirdRock3.jpg"]
 	},
 	{
 		"title" : "Project 2",
 		"dates" : "Oct 27 - present",
-		"description" : "Resume",
+		"description" : "The wave photos are more or less obligatory aren't they?",
 		"images" : [ "images/Wave1.jpg","images/Wave2.jpg"]
 	}
   ]
 };
 
 projects.display = function(){
-	for (item in projects.projects) {
+	for (var item in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
 		var formattedTitle = HTMLprojectTitle.replace("%data%",projects.projects[item].title);
 		$(".project-entry:last").append(formattedTitle);
@@ -69,7 +69,7 @@ projects.display = function(){
 		$(".project-entry:last").append(formattedDates);
 		var formattedDescription = HTMLprojectDescription.replace("%data%",projects.projects[item].description);
 		$(".project-entry:last").append(formattedDescription);
-		for (image in projects.projects[item].images) {
+		for (var image in projects.projects[item].images) {
 			var formattedImage = HTMLprojectImage.replace("%data%",projects.projects[item].images[image]);
 			$(".project-entry:last").append(formattedImage);
 		}
@@ -80,7 +80,7 @@ projects.display = function(){
 var bio = {
 	"name" : "Mary Walsh",
 	"role" : "Aspiring Web Developer",
-	"skills" : ["HTML", "css", "JavaScript", "Good Design Sense"],
+	"skills" : ["Web Development", "Design", "Organization"],
 	"contacts" : {
 		"mobile" : "610 565 5438",
 		"email" : "quite.contrary@gmail.com",
@@ -91,7 +91,7 @@ var bio = {
 };
 
 bio.display = function() {
-	// topContacts not needed with the navbar in place - uncomment if you change your mind
+	// topContacts not needed with the navbar in place so commented out
 	//$("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
 	//$("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
 	//$("#topContacts").append(HTMLtwitter.replace("%data%", bio.contacts.twitter));
@@ -105,7 +105,7 @@ bio.display = function() {
 
 	if (bio.skills.length > 0 ) {
 		$("#header").append(HTMLskillsStart);
-		for (skill in bio.skills) {
+		for (var skill in bio.skills) {
 			var formattedSkill = HTMLskills.replace("%data%",bio.skills[skill]);
 			$("#skills").append(formattedSkill);
 		}
@@ -148,7 +148,7 @@ var education = {
 };
 
 education.display = function(){
-	for (item in education.schools) {
+	for (var item in education.schools) {
 		$("#education").append(HTMLschoolStart);
 		var formattedName = HTMLschoolName.replace("%data%",education.schools[item].name);
 		var formattedDegree = HTMLschoolDegree.replace("%data%",education.schools[item].degree);
@@ -167,7 +167,7 @@ education.display = function(){
 
 	if (education.onlineCourses.length >0) {
 		$("#education").append(HTMLonlineClasses);
-		for (item in education.onlineCourses) {
+		for (var item in education.onlineCourses) {
 			$("#education").append(HTMLschoolStart);
 			var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[item].title);
 			var formattedonlineSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[item].school);
@@ -183,32 +183,23 @@ education.display = function(){
 }
 
 
-var headshot = "images/headshot.jpg";
-//var headshot = "images/fry.jpg"; use this directory and call to source your own images.
+var headshot = "images/TheEyeHasIt.jpg";
 
 
 $("#header").prepend(HTMLheaderRole.replace("%data%", bio["role"]));
 $("#header").prepend(HTMLheaderName.replace("%data%", bio["name"]));
-
 $("#header").append(HTMLbioPic.replace("%data%", headshot));
 
-
-
-
-// make an object that stored places lived and modify helper.js to update the map with them all
-
-
+// calls to the display functions
 projects.display();
 bio.display();
 work.display();
 education.display();
 
-
-
-
 $("#mapDiv").append(googleMap);
 
-$("#main").append(internationalizeButton);
+//leaving the following call commented out in case I need to refer to it at some point
+//$("#main").append(internationalizeButton);
 
 //smooth scroll code below
 $(function() {
@@ -230,7 +221,7 @@ $(function() {
 
 function locationizer(work_obj) {
 	var locations = [];
-	for (job in work_obj.jobs) {
+	for (var job in work_obj.jobs) {
 		var newLocation = work_obj.jobs[job].location;
 		locations.push(newLocation);
 	}

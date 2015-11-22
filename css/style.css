@@ -111,14 +111,14 @@ a {
   margin-top: 10px;
   display: block;
 }
-
+/* what welcome message? did I miss something in the
 .welcome-message {
   font-style: italic;
   font-size: 18px;
   color: #f3f3f3;
   line-height: 28px;
 }
-
+*/
 #skills-h3 {
   color: rgba(65, 46, 44, 1);
   /*
@@ -132,17 +132,17 @@ a {
   flex-flow: column nowrap;
   justify-content: flex-start;
 }
-
+/* no longer needed
 .orange {
   /*background-color: rgba(172, 188, 201, 1);*/
    /* original color
   background-color: #f5ae23;
-  */
+
 }
+*/
 
-.orange-text {
+.chocolate-text {
   color: rgba(65, 46, 44, 1);
-
   /* original color
   color: #f5ae23;
   */
@@ -153,25 +153,23 @@ a {
   color: #fff;
 }
 
-.gray {
-  /* in the original file used for Work Experience and education*/
+.pale-blue {
   background-color: rgba(172, 188, 201, 0.4);
-  /*background-color: rgba(140, 150, 87, 0.2);*/
-  /* original color
-  background-color: #f3f3f3;
-  */
   padding-bottom: 10px;
   clear:both;
 }
 
+/* no longer used
 .dark-gray {
   /* in the original file used for footer*/
 
   /*background-color: rgba(172, 188, 201, 1);*/
   /* original color
   background-color: #4a4a4a;
-  */
+
 }
+*/
+
 #footerContacts {
   background-color: rgba(172, 188, 201, 1);
 }
@@ -179,10 +177,12 @@ a {
 .url-link {
   -webkit-tap-highlight-color: #000;
   color: #8c9657;
+  font-size: 18px;
   padding-top: 5px 5%;
-
   padding-left: 0;
-  /*color: -webkit-link; */
+  /* I'm not sure how -webkit works? and changed the color anyway
+  color: -webkit-link;
+  */
 
   cursor: auto;
 
@@ -194,7 +194,6 @@ a {
 #header,
 #navbar {
   background-color: rgba(172, 188, 201, 1);
-  /*background-color: rgba(140, 150, 87, 0.5);*/
   /* original color
   background-color: #484848;
   */
@@ -221,7 +220,6 @@ ul {
 nav {
   margin: 0px;
   width: 100%;
-  /* background-color: #4a4a4a; */
   padding-bottom: 50px;
   list-style: none;
 }
@@ -263,6 +261,18 @@ span {
   text-align: center;
 }
 
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
@@ -289,18 +299,6 @@ span {
   }
 }
 
-#map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
-}
-
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
-}
-
 @media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
@@ -308,4 +306,4 @@ span {
   }
 }
 
-/* try this css for highlighting url links -webkit-tap-highlight-color: rgba(0,0,0,0);
+
