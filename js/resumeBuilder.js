@@ -31,7 +31,7 @@ work.display = function(){
 		$(".work-entry:last").append(formattedDates);
 		$(".work-entry:last").append(formattedDescription);
 
-	};
+	}
 
 };
 
@@ -171,27 +171,27 @@ education.display = function() {
 	if (education.onlineCourses.length >0) {
 		$("#education").append(HTMLonlineClasses);
 		var onlineCoursesLength = education.onlineCourses.length;
-		for (var i = 0; i < onlineCoursesLength; i++) {
+		for (i = 0; i < onlineCoursesLength; i++) {
 			$("#education").append(HTMLschoolStart);
 			var formattedTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[i].title);
 			var formattedonlineSchool = HTMLonlineSchool.replace("%data%",education.onlineCourses[i].school);
 			var formattedTitelonlineSchool = formattedTitle + formattedonlineSchool;
 			$(".education-entry:last").append(formattedTitelonlineSchool);
-			var formattedDates = HTMLonlineDates.replace("%data%",education.onlineCourses[i].dates);
-			$(".education-entry:last").append(formattedDates);
-			var formattedURL = HTMLonlineURL.replace("%data%","Visit Website");
-			var formattedLinkedURL = formattedURL.replace("#",education.onlineCourses[i].url);
-			$(".education-entry:last").append(formattedLinkedURL);
+			var formattedOnlineDates = HTMLonlineDates.replace("%data%",education.onlineCourses[i].dates);
+			$(".education-entry:last").append(formattedOnlineDates);
+			var formattedOnlineURL = HTMLonlineURL.replace("%data%","Visit Website");
+			var formattedOnlineLinkedURL = formattedOnlineURL.replace("#",education.onlineCourses[i].url);
+			$(".education-entry:last").append(formattedOnlineLinkedURL);
 		}
 	}
-}
+};
 
 
 var headshot = "images/TheEyeHasIt.jpg";
 
 
-$("#header").prepend(HTMLheaderRole.replace("%data%", bio["role"]));
-$("#header").prepend(HTMLheaderName.replace("%data%", bio["name"]));
+$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
+$("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
 $("#header").append(HTMLbioPic.replace("%data%", headshot));
 
 // calls to the display functions
@@ -220,9 +220,3 @@ $(function() {
     }
   });
 });
-
-
-
-
-
-
